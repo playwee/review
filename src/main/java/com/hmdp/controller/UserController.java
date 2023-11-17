@@ -36,8 +36,8 @@ public class UserController {
      */
     @PostMapping("code")
     public Result sendCode(@RequestParam("phone") String phone, HttpSession session) {
-        // TODO 发送短信验证码并保存验证码
-        return Result.fail("功能未完成");
+        // 发送短信验证码并保存验证码，适合调业务，而不是写业务
+        return userService.sendCode(phone,session);//成功返回
     }
 
     /**
@@ -46,8 +46,10 @@ public class UserController {
      */
     @PostMapping("/login")
     public Result login(@RequestBody LoginFormDTO loginForm, HttpSession session){
-        // TODO 实现登录功能
-        return Result.fail("功能未完成");
+        // 实现登录功能
+        //手机号+验证码的验证
+        //此时有个问题就是个人中心无法显示
+        return userService.login(loginForm,session);
     }
 
     /**

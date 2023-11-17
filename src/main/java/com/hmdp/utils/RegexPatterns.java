@@ -1,6 +1,7 @@
 package com.hmdp.utils;
 
 /**
+ * 正则抽象类，声明一些公共常量静态方法使用后
  * @author wee
  */
 public abstract class RegexPatterns {
