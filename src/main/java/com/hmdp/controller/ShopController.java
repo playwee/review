@@ -33,7 +33,7 @@ public class ShopController {
      */
     @GetMapping("/{id}")
     public Result queryShopById(@PathVariable("id") Long id) {
-        //TODO 添加redis缓存
+        //TODO 修改
         return shopService.queryById(id);
     }
 
@@ -57,9 +57,8 @@ public class ShopController {
      */
     @PutMapping
     public Result updateShop(@RequestBody Shop shop) {
-        // 写入数据库
-        shopService.updateById(shop);
-        return Result.ok();
+        //TODO 更新数据库
+        return shopService.update(shop);
     }
 
     /**
